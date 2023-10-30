@@ -1,0 +1,47 @@
+@model DatosFormulario
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <form method="POST" action="/info/formulario">
+    <div class="box-form">
+        <label asp-for="Nombre"> Nombre: </label>
+        <input asp-for="Nombre">
+        <span asp-validation-for="Nombre"></span>
+    </div>
+    <div class="box-form">
+        <label asp-for="Locacion">Dojo Locación :</label>
+        <select asp-for="Locacion" id="locacion">
+            <option value="">-</option>
+            <option value="chile">Chile</option>
+            <option value="mexico">Mexico</option>
+            <option value="brazil">Brazil</option>
+        </select>
+        <span asp-validation-for="Locacion"></span>
+    </div>
+    <div class="box-form">
+        <label asp-for="LenguajeFavorito">Lenguaje Favorito: </label>
+        <select asp-for="LenguajeFavorito" id="lenguaje">
+            <option value="php">PHP</option>
+            <option value="python">Python</option>
+            <option value="csharp">C#</option>
+        </select>
+        <span asp-validation-for="LenguajeFavorito"></span>
+    </div>
+    <div class="box-form">
+        <label asp-for="Comentario">Comentario (opcional)</label><br>
+        <textarea asp-for="Comentario" id="comentario" cols="40" rows="5"></textarea>
+        <span asp-validation-for="Comentario"></span>
+    </div>
+    <button id="btn-formulario" type="submit">
+        Enviar
+    </button>
+</form>
+</body>
+</html>

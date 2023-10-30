@@ -1,0 +1,24 @@
+@model DatosFormulario
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Información enviada</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <div class="box-principal">
+        <p>Nombre: @ViewBag.Nombre</p>
+        <p>Locacion: @ViewBag.Locacion</p>
+        <p>Lenguaje Favorito: @ViewBag.LenguajeFavorito</p>
+        <p>Comentario : @ViewBag.Comentario</p>
+    
+        <form action="/gobackform" method="GET">
+        <button class="btn-goback">GoBack</button>
+        </form>
+    </div>
+    
+</body>
+</html>
